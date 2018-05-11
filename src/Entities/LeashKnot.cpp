@@ -93,18 +93,6 @@ void cLeashKnot::KilledBy(TakeDamageInfo & a_TDI)
 
 
 
-void cLeashKnot::GetDrops(cItems & a_Items, cEntity * a_Killer)
-{
-	if ((a_Killer != nullptr) && a_Killer->IsPlayer() && !static_cast<cPlayer *>(a_Killer)->IsGameModeCreative())
-	{
-		a_Items.push_back(cItem(E_ITEM_LEASH));
-	}
-}
-
-
-
-
-
 void cLeashKnot::SpawnOn(cClientHandle & a_ClientHandle)
 {
 	super::SpawnOn(a_ClientHandle);
